@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>mainpage</title>
+        <link rel="stylesheet" href="project.css">
+    </head>
+    <body>
+        <h1>Click the button to watch a random YouTube video:</h1>
+    <button onclick="openRandomVideo()">Watch Random Video</button>
+
+    <script>
+        function openRandomVideo() {
+            // An array of YouTube video IDs
+            var videoIds = [
+                'VIDEO_ID_1',
+                'VIDEO_ID_2',
+                'VIDEO_ID_3',
+                // Add more video IDs here
+            ];
+
+            // Generate a random index to select a video from the array
+            var randomIndex = Math.floor(Math.random() * videoIds.length);
+
+            // Get the selected video ID
+            var selectedVideoId = videoIds[randomIndex];
+
+            // Open the YouTube video in a new tab
+            window.open('https://www.youtube.com/watch?v=' + selectedVideoId);
+        }
+    </script>
+    </body>
+</html>
